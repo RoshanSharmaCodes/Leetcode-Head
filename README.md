@@ -16,5 +16,5 @@
 14. Topological Sorting in a DAG
 15. Union Find Algorithm
 16. Prism's Algorithm
-17. [Rabin Karp Algorithm](www.google.com)
+17. [Rabin Karp Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Rabin%20Karp%20Algo)
 18. KMP Algorithm
