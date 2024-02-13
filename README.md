@@ -16,3 +16,5 @@
 14. Topological Sorting in a DAG
 15. Union Find Algorithm
 16. Prism's Algorithm
+17. Rabin Karp Algorithm
+18. KMP Algorithm
