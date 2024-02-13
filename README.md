@@ -15,3 +15,4 @@
 13. Floyd’s Cycle Detection Algorithm
 14. Topological Sorting in a DAG
 15. Union Find Algorithm
+16. Prism's Algorithm
