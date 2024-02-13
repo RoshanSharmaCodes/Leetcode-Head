@@ -1,4 +1,4 @@
-#Top Algorithms to Learn for DSA:
+# Top Algorithms to Learn for DSA:
 
 1. Binary Search Algorithm
 2. Breadth First Search (BFS) Algorithm
