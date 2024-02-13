@@ -1,0 +1,105 @@
+KMP (Knuth-Morris-Pratt) Algorithm (String Matching Algorithm)
+
+As mentioned above by using this algorithm we can find pattern string in the parent string.
+
+Knuth-Morris and Pratt introduce a linear time algorithm for the string matching problem. A matching time of O (n) is achieved by avoiding comparison with an element 
+of 'S' that have previously been involved in comparison with some element of the pattern 'p' to be matched. i.e., backtracking on the string 'S' never occurs.
+
+To Compare the pattern string with parent string, we create LPS Array, which keeps track of the repeated patterns in the pattern string.
+Resource: https://www.youtube.com/watch?v=Bqsc0e-EKuo
+
+For the pattern “AAAA”, lps[] is [0, 1, 2, 3]
+
+For the pattern “ABCDE”, lps[] is [0, 0, 0, 0, 0]
+
+For the pattern “AABAACAABAA”, lps[] is [0, 1, 0, 1, 2, 0, 1, 2, 3, 4, 5]
+
+For the pattern “AAACAAAAAC”, lps[] is [0, 1, 2, 0, 1, 2, 3, 3, 3, 4] 
+
+For the pattern “AAABAAA”, lps[] is [0, 1, 2, 0, 1, 2, 3]
+
+Resource:
+Blog: https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/
+Video: https://www.youtube.com/watch?v=V5-7GzOfADQ&t=938s
+
+
+
+Code:
+ //Javascript program for implementation of KMP pattern
+    // searching algorithm
+     
+    function computeLPSArray(pat, M, lps)
+    {
+        // length of the previous longest prefix suffix
+        var len = 0;
+        var i = 1;
+        lps[0] = 0; // lps[0] is always 0
+     
+        // the loop calculates lps[i] for i = 1 to M-1
+        while (i < M) {
+            if (pat.charAt(i) == pat.charAt(len)) {
+                len++;
+                lps[i] = len;
+                i++;
+            }
+            else // (pat[i] != pat[len])
+            {
+                // This is tricky. Consider the example.
+                // AAACAAAA and i = 7. The idea is similar
+                // to search step.
+                if (len != 0) {
+                    len = lps[len - 1];
+     
+                    // Also, note that we do not increment
+                    // i here
+                }
+                else // if (len == 0)
+                {
+                    lps[i] = len;
+                    i++;
+                }
+            }
+        }
+    }
+     
+    function KMPSearch(pat,txt)
+    {
+        var M = pat.length;
+        var N = txt.length;
+     
+        // create lps[] that will hold the longest
+        // prefix suffix values for pattern
+        var lps = [];
+        var j = 0; // index for pat[]
+     
+        // Preprocess the pattern (calculate lps[]
+        // array)
+        computeLPSArray(pat, M, lps);
+     
+        var i = 0; // index for txt[]
+        while ((N - i) >= (M - j)) {
+            if (pat.charAt(j) == txt.charAt(i)) {
+                j++;
+                i++;
+            }
+            if (j == M) {
+                document.write("Found pattern " + "at index " + (i - j) + "\n");
+                j = lps[j - 1];
+            }
+     
+            // mismatch after j matches
+            else if (i < N && pat.charAt(j) != txt.charAt(i)) {
+                // Do not match lps[0..lps[j-1]] characters,
+                // they will match anyway
+                if (j != 0)
+                    j = lps[j - 1];
+                else
+                    i = i + 1;
+            }
+        }
+    }
+     
+     
+    var txt = "ABABDABACDABABCABAB";
+    var pat = "ABABCABAB";
+    KMPSearch(pat, txt);
