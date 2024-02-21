@@ -21,3 +21,4 @@
 19. Prism's Algorithm
 20. [Rabin Karp Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Rabin%20Karp%20Algo)
 21. [KMP Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/KMP%20Algorithm)
+22. Huffman Coding
