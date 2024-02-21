@@ -1,0 +1,48 @@
+Breadth First Search aka Level Order Traversing
+
+Level Order Traversal or Bredth First Search technique is defined as a method to traverse a Tree such that all nodes present in the same level are traversed completely before traversing the next level.
+
+How does Level Order Traversal work?
+  The main idea of level order traversal is to traverse all the nodes of a lower level before moving to any of the nodes of a higher level. This can be done in any of the following ways: 
+  1. the naive one (finding the height of the tree and traversing each level and printing the nodes of that level)
+  2. efficiently using a queue.
+
+Code:
+class Tree {
+  constructor(value, left, right) {
+    this.value = value
+    this.left = left
+    this.right = right
+  }
+}
+
+const breadthFirstTraversal = (tree, callback) => {
+  if (tree == null) {
+    return;
+  }
+
+  let queue = [tree]
+
+  while (queue.length > 0) {
+    let item = queue.shift()
+    let value = item.value
+    callback(value)
+
+    if (item.left == null && item.right == null) {
+      continue
+    }
+    if (item.left != null) {
+      queue.push(item.left)
+    }
+    if (item.right != null) {
+      queue.push(item.right)
+    }
+  }
+}
+
+t = new Tree(1,
+      new Tree(2, null, null), new Tree(3,
+        new Tree(4, null, null), null))
+
+breadthFirstTraversal(t, console.log)
+// Will print "1,2,3,4"
