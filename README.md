@@ -1,6 +1,6 @@
 # Top Algorithms to Learn for DSA:
 
-1. Binary Search Algorithm
+1. [Binary Search Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Binary%20Search)
 2. Breadth First Search (BFS) Algorithm (Graph)
 3. Depth First Search (DFS) Algorithm (Graph)
 4. Breadth First Search (BFS) Algorithm (Tree)
