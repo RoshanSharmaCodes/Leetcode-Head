@@ -14,7 +14,6 @@
 11. Dijkstra’s Algorithm
 12. Bellman Ford Algorithm
 13. [Kadane’s Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Kdane's%20Algorithm)
-14. Lee Algorithm
 15. [Flood Fill Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Flood%20Fill%20Algorithm)
 16. [Floyd’s Cycle Detection Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Floyd%20Cycle%20Algorithm)
 17. [Topological Sorting (DFS) in a DAG](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Topological%20Sorting%20DFS)
