@@ -1,0 +1,19 @@
+Inorder Traversal:
+1. Traverse the left subtree, i.e., call Inorder(left-subtree)
+2. Visit the root
+3. Traverse the right subtree, i.e., call Inorder(right-subtree)
+
+Code:
+function printInorder(node) {
+    if (node == null)
+        return;
+ 
+    /* first recur on left child */
+    printInorder(node.left);
+ 
+    /* then print the data of node */
+    document.write(node.key + " ");
+ 
+    /* now recur on right child */
+    printInorder(node.right);
+}
