@@ -1,1 +1,68 @@
+Floyd Cycle Detection (To Detect Cycle in Graph or Linked List)
 
+Also know as Tortoise and Rabbit Method.
+
+Floyd’s cycle finding algorithm or Hare-Tortoise algorithm is a pointer algorithm that uses only two pointers, moving through the sequence at different speeds. 
+This algorithm is used to find a loop in a linked list. 
+It uses two pointers one moving twice as fast as the other one. The faster one is called the fast pointer and the other one is called the slow pointer.
+
+While traversing the linked list one of these things will occur-
+
+The Fast pointer may reach the end (NULL) this shows that there is no loop in the linked list.
+The Fast pointer again catches the slow pointer at some time therefore a loop exists in the linked list.
+
+Code:
+   
+        // JavaScript code for the above approach 
+        class Node
+        {
+            constructor(d) 
+            {
+                this.data = d;
+                this.next = null;
+            }
+        }
+ 
+        // initialize a new head for the linked list
+        let head = null;
+ 
+        // detect if there is a loop
+        // in the linked list
+        function detectLoop(head) {
+            let slowPointer = head;
+            let fastPointer = head;
+ 
+            while (slowPointer != null
+                && fastPointer != null
+                && fastPointer.next != null) {
+                slowPointer = slowPointer.next;
+                fastPointer = fastPointer.next.next;
+                if (slowPointer == fastPointer)
+                    return 1;
+            }
+ 
+            return 0;
+        }
+ 
+        // inserting new values
+        head = new Node(10);
+        head.next = new Node(20);
+        head.next.next = new Node(30);
+        head.next.next.next = new Node(40);
+        head.next.next.next.next = new Node(50);
+ 
+        // adding a loop for the sake
+        // of this example
+        let temp = head;
+        while (temp.next != null)
+            temp = temp.next;
+ 
+        temp.next = head;
+ 
+        // loop added;
+        if (detectLoop(head))
+            document.write("Loop exists in the Linked List" + "<br>");
+        else
+            document.write("Loop does not exists in the Linked List" + "<br>");
+ 
+       // This code is contributed by Potta Lokesh
