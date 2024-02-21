@@ -13,8 +13,9 @@
 11. Lee Algorithm
 12. [Flood Fill Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Flood%20Fill%20Algorithm)
 13. Floyd’s Cycle Detection Algorithm
-14. Topological Sorting in a DAG
-15. Union Find Algorithm
-16. Prism's Algorithm
-17. [Rabin Karp Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Rabin%20Karp%20Algo)
-18. [KMP Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/KMP%20Algorithm)
+14. [Topological Sorting (DFS) in a DAG](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Topological%20Sorting%20DFS)
+15. [Topological Sorting (BFS) in a DAG (Kahn's Algorithm)](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Topological%20Sorting%20BFS%20(Kahn's%20ALgorithm))
+16. Union Find Algorithm
+17. Prism's Algorithm
+18. [Rabin Karp Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Rabin%20Karp%20Algo)
+19. [KMP Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/KMP%20Algorithm)
