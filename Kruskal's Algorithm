@@ -1,0 +1,61 @@
+Kruskal’s Minimum Spanning Tree (MST) Algorithm
+
+What is Minimum Spanning Tree?
+A minimum spanning tree (MST) or minimum weight spanning tree for a weighted, connected, undirected graph is a spanning tree with a weight less than or equal to the weight of every other spanning tree.
+
+How does Kruskal Algorithm Works?
+In Kruskal’s algorithm, sort all edges of the given graph in increasing order. Then it keeps on adding new edges and nodes in the MST if the newly added edge does not form a cycle. It picks the minimum weighted 
+edge at first and the maximum weighted edge at last. Thus we can say that it makes a locally optimal choice in each step in order to find the optimal solution. Hence this is a Greedy Algorithm.
+
+Algorithm:
+1. Sort all the edges in non-decreasing order of their weight. 
+2. Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If the cycle is not formed, include this edge. Else, discard it. 
+3. Repeat step#2 until there are (V-1) edges in the spanning tree.
+
+
+Code:
+
+    class UnionFind {
+      constructor(elements) {
+        this.parent = {};
+
+        elements.forEach(e => (this.parent[e] = e));
+      }
+
+      union(a, b) {
+        this.parent[this.find(a)] = this.find(b);
+      }
+
+      find(a) {
+        while (this.parent[a] !== a) {
+          a = this.parent[a];
+        }
+
+        return a;
+      }
+
+      connected(a, b) {
+        return this.find(a) === this.find(b);
+      }
+    }
+
+
+    function kruskal(graph) {
+      graph.sort((a, b) => a.weight - b.weight);
+
+      const nodes = new Set(graph.map(e => [e.source, e.destination]).flat());
+      const unionFind = new UnionFind(nodes);
+
+      const mst = [];
+
+      for (let edge of graph) {
+        if (!unionFind.connected(edge.source, edge.destination)) {
+          unionFind.union(edge.source, edge.destination);
+          mst.push(edge);
+        }
+      }
+
+      return mst;
+    }
+
+    console.log(kruskal(graph));
