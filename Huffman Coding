@@ -1,0 +1,68 @@
+Huffman Coding Algorithm
+
+Huffman Coding is a technique of compressing data to reduce its size without losing any of the details. It was first developed by David Huffman.
+Huffman Coding is generally useful to compress the data in which there are frequently occurring characters.
+
+
+Algorithm: https://www.programiz.com/dsa/huffman-coding
+Code: https://reintech.io/blog/javascript-for-implementing-huffman-coding
+
+Building the Hufffman Tree:
+
+function buildTree(data) {
+    let queue = new PriorityQueue();
+    for(let character in data) {
+        if(data.hasOwnProperty(character)) {
+            let node = new Node(character, data[character]);
+            queue.enqueue(node);
+        }
+    }
+    while(queue.size() > 1) {
+        let node1 = queue.dequeue();
+        let node2 = queue.dequeue();
+        let combined = new Node(null, node1.frequency + node2.frequency);
+        combined.left = node1;
+        combined.right = node2;
+        queue.enqueue(combined);
+    }
+    return queue.dequeue();
+}
+
+
+Generating Huffman Codes:
+
+function generateCodes(node, prefix = '') {
+    if(node == null) return;
+    if(node.character != null) {
+        huffCodes[node.character] = prefix;
+        return;
+    }
+    generateCodes(node.left, prefix + '0');
+    generateCodes(node.right, prefix + '1');
+}
+
+
+
+Encoding and Decoding Data:
+
+function encode(data) {
+    let output = '';
+    for(let i = 0; i < data.length; i++) {
+        output += huffCodes[data[i]];
+    }
+    return output;
+}
+
+function decode(data, node) {
+    let output = '';
+    let currentNode = node;
+    for(let i = 0; i < data.length; i++) {
+        if(data[i] == '0') currentNode = currentNode.left;
+        else currentNode = currentNode.right;
+        if(currentNode.character != null) {
+            output += currentNode.character;
+            currentNode = node;
+        }
+    }
+    return output;
+}
