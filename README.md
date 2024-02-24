@@ -1,8 +1,8 @@
 # Top Algorithms to Learn for DSA:
 
 1. [Binary Search Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Binary%20Search)
-2. Breadth First Search (BFS) Algorithm (Graph)
-3. Depth First Search (DFS) Algorithm (Graph)
+2. [Breadth First Search (BFS) Algorithm (Graph)](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/BFS%20in%20Graph)
+3. [Depth First Search (DFS) Algorithm (Graph)](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/DFS%20in%20graph)
 4. [Breadth First Search (BFS) Algorithm (Tree)](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/BFS%20Tree)
 5. Depth First Search (DFS) Algorithm (Tree)
    1. [Inorder](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Inorder%20Traversal)
