@@ -18,7 +18,7 @@
 16. [Floyd’s Cycle Detection Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Floyd%20Cycle%20Algorithm)
 17. [Topological Sorting (DFS) in a DAG](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Topological%20Sorting%20DFS)
 18. [Topological Sorting (BFS) in a DAG (Kahn's Algorithm)](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Topological%20Sorting%20BFS%20(Kahn's%20ALgorithm))
-19. Union Find Algorithm
+19. LCS - Longest Common Subsequence
 20. [Prism's Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Prims's%20Algorithm)
 21. [Rabin Karp Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Rabin%20Karp%20Algo)
 22. [KMP Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/KMP%20Algorithm)
