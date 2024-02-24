@@ -1,0 +1,33 @@
+Depth First Search in Graph
+
+Depth First Traversal (or DFS) for a graph is similar to Depth First Traversal of a tree. The only catch here is, that, unlike trees, graphs may contain cycles (a node may be visited twice). 
+To avoid processing a node more than once, use a boolean visited array. A graph can have more than one DFS traversal.
+
+How does DFS work?
+Depth-first search is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the 
+case of a graph) and explores as far as possible along each branch before backtracking.
+
+
+Code:
+function dfs(graph, start) {
+  const stack = [start];
+  const visited = new Set();
+  const result = [];
+
+  while (stack.length) {
+    const vertex = stack.pop();
+
+    if (!visited.has(vertex)) {
+      visited.add(vertex);
+      result.push(vertex);
+
+      for (const neighbor of graph[vertex]) {
+        stack.push(neighbor);
+      }
+    }
+  }
+
+  return result;
+}
+
+dfs(graph, 'A'); // ['A', 'D', 'E', 'F', 'B', 'C']
