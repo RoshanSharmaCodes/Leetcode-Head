@@ -10,9 +10,9 @@
    3. [Postorder](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Postorder%20Traversal)
 8. [Insertion Sort](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Insertion%20Sorting), [Selection Sort](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Selection%20Sort), [Merge Sort](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Merge%20Sorting), [Quicksort](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Quick%20Sorting), [Heap Sort](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Heap%20Sort)
 9. [Kruskal’s Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Kruskal's%20Algorithm)
-10. Floyd Warshall Algorithm
-11. Dijkstra’s Algorithm
-12. Bellman Ford Algorithm
+10. [Floyd Warshall Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Floyd%20Warshall%20Algorithm)
+11. [Dijkstra’s Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Dijkarstra'%20Algorithm)
+12. [Bellman Ford Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Bellman%20Ford%20Algorithm)
 13. [Kadane’s Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Kdane's%20Algorithm)
 15. [Flood Fill Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Flood%20Fill%20Algorithm)
 16. [Floyd’s Cycle Detection Algorithm](https://github.com/RoshanSharmaCodes/Leetcode-Head/blob/main/Floyd%20Cycle%20Algorithm)
