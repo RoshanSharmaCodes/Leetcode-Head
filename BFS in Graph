@@ -1,0 +1,44 @@
+Breadth First Search in Graph
+
+What is BFS in Graph?
+The Breadth First Search (BFS) algorithm is used to search a graph data structure for a node that meets a set of criteria. 
+It starts at the root of the graph and visits all nodes at the current depth level before moving on to the nodes at the next depth level.
+
+How does BFS work?
+Starting from the root, all the nodes at a particular level are visited first and then the nodes of the next level are traversed till all the nodes are visited.
+To do this a queue is used. All the adjacent unvisited nodes of the current level are pushed into the queue and the nodes of the current level are marked visited and popped from the queue.
+
+Code:
+class Graph {
+    constructor() {
+        this.adjacencyList = {};
+    }
+
+    addVertex(vertex) {
+    if (!this.adjacencyList[vertex]) this.adjacencyList[vertex] = [];
+}
+addEdge(v1, v2) {
+    this.adjacencyList[v1].push(v2);
+    this.adjacencyList[v2].push(v1);
+}
+
+bfs(start) {
+    const queue = [start];
+    const result = [];
+    const visited = {};
+    visited[start] = true;
+
+    while (queue.length) {
+        let currentVertex = queue.shift();
+        result.push(currentVertex);
+
+        this.adjacencyList[currentVertex].forEach(neighbor => {
+            if (!visited[neighbor]) {
+                visited[neighbor] = true;
+                queue.push(neighbor);
+            }
+        });
+    }
+    return result;
+}
+}
